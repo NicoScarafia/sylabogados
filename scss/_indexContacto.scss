@@ -1,0 +1,246 @@
+@import 'variables';
+
+#contacto {
+    
+    h2 {
+        @extend %titulos;
+    }
+
+    .texto-container-contacto {
+        text-align: center;
+        color: $color-negro;
+        margin-top: -1rem;
+
+        h3 {
+            @include titulosSecundarios;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .contacto-container {
+        display: grid;
+        grid-template-columns: .8fr 1fr;
+        grid-template-rows: .8fr 1fr;
+        gap:1.5rem;
+        grid-template-areas: "formulario lista"
+                             "formulario mapa";
+        text-align: center;
+        margin: 3rem 0 3rem 3.5rem;
+    
+    
+        .formulario-contacto {
+        grid-area: formulario;
+        }
+
+        .lista-contacto {
+        grid-area: lista;
+        }
+
+        .mapa-contacto {
+        grid-area: mapa;
+        }
+    }
+
+    .formulario-contacto {
+        @include flexCenter;
+        background-color: $color-principal;
+        color: $color-blanco;
+        height: auto;
+        border-radius: .8rem;
+
+    
+        h4 {
+            @include titulosSecundarios;
+            margin-bottom: 0;
+            margin-top: 1.5em;
+        }
+
+        fieldset {
+            legend {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-top: 1.2rem;
+            }
+
+            input, option, area {
+                margin: .3rem;
+                padding: .3rem;
+                max-width: 12rem;
+            }
+
+            .text-area {
+                margin: .8rem 1rem;
+                width: 26rem;
+                max-width: 26rem;
+                height: 15rem;
+                max-height: 15rem;
+
+                &::placeholder {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .btn {
+            @include buttonStyle;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .lista-contacto {
+        @include flexCenter;
+        align-self: center;
+        flex-wrap: wrap;
+
+        div {
+            @include flexColumn;
+            padding: 0.5rem 1.1rem;
+
+            a {
+                color: $color-negro;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+
+            .contacto-phone {
+                &:hover {
+                    @include transitionHover;
+                    color: $color-acentos;
+                }
+            }
+
+            .contacto-whatsapp {
+                &:hover {
+                    @include transitionHover;
+                    color: nth($extra-colores, 3);
+                }
+            }
+
+            .contacto-facebook {
+                &:hover {
+                    @include transitionHover;
+                    color: nth($extra-colores, 2);
+                }
+            }
+
+            .contacto-maps {
+                &:hover {
+                    @include transitionHover;
+                    color: nth($extra-colores, 4);
+                }
+            }
+    
+            .bi {
+                font-size: 1.7rem;
+            }
+
+            .bi-telephone-outbound-fill {
+                color: $color-acentos;
+            }
+    
+            .bi-whatsapp {
+                color: nth($extra-colores, 3);
+            }
+            
+            .bi-facebook {
+                color: nth($extra-colores, 2);
+            }
+            
+            .bi-geo-alt-fill {
+                color: nth($extra-colores, 4);
+            }   
+        }
+    }
+
+    .map {
+        width: 80%;
+        height: 80%;
+        align-self: center;
+    }
+}
+
+// MEDIA QUERIES
+
+//mobile
+
+@media all and (max-width: 768px) {
+
+    #contacto {
+        
+        .contacto-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto; 
+            gap: 3rem;
+    
+            .formulario-contacto {
+                border-radius: 0;
+                max-width: 30rem;
+                margin-top: 2rem;
+    
+                h4 {
+                    font-size: 1.3rem;
+                }
+            }
+    
+            fieldset {
+    
+                input, option, area {
+                    
+                    &::placeholder{
+                        font-size: 0.9rem;
+                    }
+                }
+    
+                .text-area {
+                    margin: 1rem;
+                    width: 90%;
+                    height: 15rem;
+                    max-height: 15rem;
+    
+                    &::placeholder {
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .map {
+                width: 100vw;
+                height: 20rem;
+            }  
+        }      
+    }
+}
+
+// tablet 
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    #contacto {
+        .contacto-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto; 
+            gap: 3rem;
+        }
+    
+        .formulario-contacto {
+            width: 70%;
+            max-width: 30rem;
+        }
+    
+        .lista-contacto {
+            margin-top: 2rem;
+        }
+    
+        .map {
+            margin-top: 2rem;
+            height: 20rem;
+            width: 40rem;
+        }
+    }
+}

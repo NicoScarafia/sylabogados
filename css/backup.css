@@ -1,0 +1,1147 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;800;900&display=swap');
+
+:root {
+    --color-principal: #14213d;
+    --color-acentos: #fca311;
+    --color-tercero: #b8b8b8;
+
+
+    --fuente-principal: 'Arimo', sans-serif;
+    --fuente-acentos: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+    scroll-behavior: smooth;
+}
+
+
+/*---------HEADER/NAV----------*/
+
+/*-- NAVBAR BOOTSTRAP */
+
+.navbar {
+    background-color: var(--color-principal);
+}
+
+.navbar-dark {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-family: var(--fuente-acentos);
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.nav-item a {
+    font-family: var(--fuente-acentos);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.nav-item a:hover {
+    color:var(--color-acentos);
+    transition: all 0.5s;
+}
+
+.nav-item .item-contacto {
+    color: black;
+    background-color: var(--color-acentos);
+}
+
+.nav-item .item-contacto:hover {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-item a {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nav-flex-desktop {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar-brand {
+        margin-left: 3rem;
+    }
+
+    .navbar-nav {
+        margin-right: 3rem;
+    }
+}
+
+/* ----------------INDEX----------------*/
+
+/*NUESTRO ESTUDIO*/
+
+#estudio h2, #areas h2, #contacto h2 {
+    font-family: var(--fuente-acentos);
+    font-size: 2rem;
+    color: black;
+    margin: 3rem 0rem 3rem 4rem;
+    font-weight: bold;
+}
+
+.container-estudio {
+    margin: 0 3rem 0 3rem;
+}
+
+.texto-container-estudio {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    padding-right: 3rem;
+}
+
+.img-container-estudio {
+    margin-top: -3rem;
+}
+
+.img-container-estudio img {
+    width: 100%;
+    max-width: 30rem;
+    padding-bottom: 2rem;
+}
+
+#estudio button, #areas button, .btn-contactese {
+    background-color: var(--color-acentos);
+    border-color: black;
+    font-size: 1rem;
+    padding: 0.2rem;
+    border: none;
+    min-width: 8rem;
+    min-height: 2.5rem;
+}
+
+#estudio button {
+    margin-top: 1rem;
+}
+
+#estudio button a, #areas button a, .btn-contactese a  {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#estudio button a:hover, #areas button a:hover, .btn-contactese a:hover {
+    font-size: 108%;
+    transition: 0.1s;
+}
+
+/* mq mobile */
+
+@media screen and (max-width: 768px) {
+
+    #estudio h2 {
+        text-align: center;
+        margin: 3rem 0rem 2rem 0rem;
+    }
+
+    .texto-container-estudio {
+        font-size: 1rem;
+        line-height: 2rem;
+        padding: 0;
+    }
+
+    .estudio-segundoparrafo {
+        display: none;
+    }
+
+    .img-container-estudio {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container-estudio img {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        padding: 0.5rem; 
+    }
+
+    .estudio-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #estudio h2 {
+        text-align: center;
+        margin: 3rem 0rem 2rem 0rem;
+    }
+
+    .texto-container-estudio {
+        font-size: 1rem;
+        line-height: 2rem;
+        padding: 0;
+    }
+
+    .img-container-estudio {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .estudio-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-container-estudio img {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+}
+
+.images {
+    width: 100%; 
+}
+
+.images-primera {
+    margin-top: 5rem;
+}
+
+.images-segunda {
+    margin-top: 3rem;
+}
+
+
+/*ÁREAS DE PRÁCTICA*/
+
+#areas h2, #contacto h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+}
+
+.areas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#areas section {
+    margin: 0.3rem 0.75rem 0 0.75rem;
+    padding: 1rem 2.5rem;
+    width: 21rem;
+    text-align: center;
+}
+
+#areas img {
+    height: 5.5rem;
+    margin-top: 1.5rem;
+}
+
+#areas h3 {
+    background-color: var(--color-principal);
+    max-width: 12rem;
+    color: white;
+    font-family: var(--fuente-acentos);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.7rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+#areas p {
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding-top: 0.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+#areas button {
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+/* mq mobile */
+@media screen and (max-width: 768px) {
+
+    #areas h2, #contacto h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 4rem 0 2rem 0;
+    }
+
+    #areas section {
+        margin: 0.3rem 0 0 0;
+        padding: 0.8rem 1.5rem;
+        width: 21rem;
+        text-align: center;
+    }
+
+    .areas-container {
+        margin: 0.5rem 2rem;
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .areas-container {
+        margin: 0.5rem 1rem;
+    }
+
+}
+
+/*CONTACTO*/
+
+/*--- grid-contacto ---*/
+
+#contacto {
+    margin: 0 4rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1.8fr 2fr;
+    gap:1.5rem;
+    grid-template-areas: "titulo titulo"
+                         "texto texto"
+                         "formulario lista"
+                         "formulario mapa";  
+}
+
+.titulo-contacto {
+    grid-area: titulo;
+}
+
+.texto-contacto {
+    grid-area: texto;;
+}
+
+.formulario-contacto {
+    grid-area: formulario;
+}
+
+.lista-contacto {
+    grid-area: lista;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mapa-contacto {
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    margin-top: -2.5rem;
+}
+
+.lista-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lista-contacto div {
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+/*--- fin grid-contacto ---*/
+
+.texto-contacto h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    margin-top: -1rem;
+}
+
+.texto-contacto p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*--- formulario ---*/
+
+.formulario-contacto {
+    background-color: var(--color-principal);
+    color: white;
+    height: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+}
+
+form h4 {
+    font-family: var(--fuente-acentos);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.5rem 0 1rem 0;
+    margin-bottom: -0.5rem;
+    
+}
+
+form fieldset {
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+form fieldset legend {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+form fieldset input, form fieldset option, .text-area {
+    margin: 0.3rem;
+    padding: 0.3rem;
+    max-width: 12rem;
+}
+
+.text-area {
+    width: 26rem;
+    max-width: 26rem;
+    height: 15rem;
+    max-height: 15rem;
+}
+
+form ::placeholder {
+    font-size: 0.8rem;
+}
+
+form fieldset .motivo {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+form .btn {
+    background-color: var(--color-acentos);
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 1.3rem 0;
+}
+
+/*--- lista contacto ---*/
+
+.lista-contacto div {
+    padding: 1.2rem 2rem;
+}
+
+.lista-contacto div p a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.lista-contacto div p a:hover {
+    color:var(--color-principal);
+    transition: 0.1s;
+} 
+
+.bi-telephone-fill {
+    color: var(--color-acentos);
+}
+
+.bi-facebook {
+    color: #3b5998;
+}
+
+.bi-whatsapp {
+    color: #075e54;
+}
+
+.bi-geo-alt-fill {
+    color: #ea4335;
+}
+
+/*--- mapa ---*/
+
+.map {
+    width: 80%;
+    max-height: 19rem;
+}
+
+/* mq mobile */
+@media screen and (max-width: 768px) {
+
+    #contacto {
+        display: flex; 
+        flex-direction: column; 
+        margin: 0 auto;
+    }
+
+    .lista-contacto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .map {
+        margin-top: 1rem;
+        width: 100%;
+        height: 15rem;
+    }
+
+    .texto-contacto {
+        margin-top: 1rem;
+        padding: 0.5rem
+    }
+
+    form h4 {
+        padding: 1rem 2rem 0.5rem 2rem;
+        text-transform: none;
+        font-weight: 600;
+    }
+
+    .formulario-contacto {
+        font-size: 1rem;
+        width: 100%;
+        max-width: 30rem;
+        display: block;
+        text-align: center;
+        border-radius: 0rem;
+    }
+    
+    form fieldset {
+        text-align: center;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    form fieldset legend {
+        margin-top: 1.3rem;
+        padding: .2rem 0;
+        font-weight: 500;
+    }
+    
+    .text-area {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    form ::placeholder {
+        font-size: 0.8rem;
+    }
+    
+    form fieldset .motivo {
+        margin-bottom: 2rem;
+    }
+}  
+
+/* mq tablet */
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+
+    #contacto {
+        display: flex; 
+        flex-direction: column; 
+        margin: 0 auto;
+    }
+
+    .lista-contacto {
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .formulario-contacto {
+        width: 70%;
+        max-width: 30rem;
+    }
+
+    .map {
+        margin-top: 2rem;
+        height: 30rem;
+        max-width: 40rem;
+    }
+}
+
+/* carousel-bootstrap */
+.carousel {
+    margin: 5rem auto;
+    max-width: 40rem;
+    border: 0.5rem solid var(--color-tercero);
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--color-principal);
+    border-top: 0.3rem solid var(--color-tercero);
+    width: 100%;
+    height: auto;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer p {
+    color: white;
+    font-family: var(--fuente-acentos);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 2rem;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer ul {
+    list-style: none;
+    padding: 2rem 4rem 2rem 4rem;
+}
+
+footer ul li {
+    padding: 0.3rem;
+    font-weight: 600;  
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-family: var(--fuente-acentos);
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer-contact li a:hover {
+    color: var(--color-acentos);
+    transition: 0.5s;
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+.footer-nav li:hover {
+    background-color: var(--color-acentos);
+    transition: 0.5s;
+}
+
+.footer-nav li a:hover {
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.footer-contact{
+    text-align: center;
+}
+
+/*  mq mobile */
+@media screen and (max-width: 768px) {
+    footer {
+        
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer p {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 2rem 0 2rem 0;
+        order: 3;
+    }
+
+    footer div {
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+   .footer-nav {
+      text-align: left;
+      margin: 1.5rem 0.5rem;
+      padding: 0 0;
+      order: 1;
+    }
+
+   .footer-contact {
+       text-align: right;
+       margin: 1.5rem 0.5rem;
+       padding: 0 0;
+       order: 2;
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    footer p {
+        text-align: left;
+        font-size: 0.8rem;
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    .footer-nav {
+        text-align: center;
+        padding: 1.5rem 1rem 2rem 1.5rem;
+    }
+
+    .footer-contact {
+        text-align: right;
+        padding: 1.5rem 2rem 2rem 0rem;
+    }
+}
+
+
+/* ----------------ESTUDIO----------------*/
+
+/*--- grid-estudio.html ---*/
+
+.mas-estudio {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulo titulo"
+                         "texto imagenes"
+                         "texto imagenes";
+}
+
+.titulo-estudio {
+    grid-area: titulo;
+}
+
+.mas-estudio-texto {
+    grid-area: texto;
+}
+
+.mas-estudio-img {
+    grid-area: imagenes;
+}
+
+/*--- fin grid-estudio.html ---*/
+
+.titulo-estudio, .titulo-areas {
+    font-family: var(--fuente-acentos);
+    font-size: 2.3rem;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 3rem 0 2rem 0;
+}
+
+.mas-estudio p {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+    text-align: justify;
+    padding: 1rem 4rem 0rem 5rem;
+}
+
+.mas-estudio .soluciones {
+    font-family: var(--fuente-acentos);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.mas-estudio .soluciones u {
+    font-family: var(--fuente-acentos);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+}
+
+.mas-estudio-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -1em;
+}
+
+.mas-estudio-img img {
+    width: 19rem;
+    margin-right: 5rem;
+    padding-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .mas-estudio {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    .mas-estudio p {
+        font-size: 1rem;
+        line-height: 1.8rem;
+        padding: 0 2rem;
+    }
+
+    .mas-estudio .soluciones {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }  
+    
+    .mas-estudio .soluciones u {
+        font-size: 1.3rem;
+    }  
+    
+    .mas-estudio-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .mas-estudio-img img {
+        width: 90%;
+        max-width: 23rem;
+        padding: 0.5rem;
+        margin-right: 0;
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .mas-estudio {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    .mas-estudio-img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .mas-estudio-img img {
+        width: 40%;
+        margin: 1rem;
+    }
+}
+
+
+/*EQUIPO*/
+
+.section-profesional {
+    background-image: url(../assets/img/fondo-1.png);
+    background-color: var(--color-tercero);
+    background-blend-mode: soft-light;
+    height: auto; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin-top: 4rem;
+}
+
+.section-profesional h2 {
+    font-family: var(--fuente-acentos);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 0 1rem 5rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.container-equipo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.container-equipo div {
+   padding: 1.5rem 4.5rem;
+}
+
+.container-equipo img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.nombre-profesional, .cargo-profesional {
+    background-color: var(--color-principal);
+    color: white; 
+    min-width: 14rem;
+    max-width: 14rem;
+    font-weight: 600;
+    line-height: 0.9rem;
+    padding: 0.6rem 0;
+}
+
+.nombre-profesional {
+    font-family: var(--fuente-acentos);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cargo-profesional {
+    background-color: transparent;
+    color: black; 
+    font-size: 1rem;
+    margin-top: -1rem;
+}
+
+/* mq mobile */
+@media screen and (max-width: 768px) {
+
+    .section-profesional {
+        height: auto; 
+        background-position: -72rem; 
+    }
+    
+    .section-profesional h2 {
+        font-size: 2rem;
+        padding: 2rem 0 1rem 0rem;
+        text-align: center;
+    }
+    
+    .container-equipo {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+    .container-equipo div {
+       padding: 1rem 3rem;
+    }
+    
+    .nombre-profesional, .cargo-profesional {
+        padding: 0.6rem 0;
+    }
+    
+    .nombre-profesional {
+        font-size: 1.1rem;
+    }
+    
+    .cargo-profesional {
+        font-size: 1.1rem;
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width: 639px) and (max-width: 769px) {
+    .section-profesional {
+        background-position: center; 
+    }
+}
+
+
+/*CONSULTA*/
+
+.consulta {
+    text-align: center;
+}
+
+.consulta h3 {
+    font-family: var(--fuente-acentos);
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 4rem;
+}
+
+.consulta p {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.btn-contactese {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .consulta h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .consulta p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+
+/* --------------ÁREAS DE PRÁCTICA--------------*/
+
+/*--- índice  ---*/
+
+.areas-indice {
+    background-image: url(../assets/img/fondo-2.png);
+    width: 100%;
+    height: 27.5rem;  
+    background-position: top;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.titulo-areas {
+    padding: 2rem 0.5rem;
+    margin-bottom: -1rem;
+}
+
+.areas-indice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.index {
+    display: flex;
+    justify-content: center;
+    width: 50rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.index div {
+    padding: 1rem 3rem;
+}
+
+.areas-indice img {
+    height: 6rem;
+}
+
+.areas-indice div a {
+    text-decoration: none;
+}
+
+.areas-indice div p {
+    background-color: var(--color-acentos);
+    min-width: 7.2rem;
+    max-height: 7.2rem;
+    font-family: var(--fuente-acentos);
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .areas-indice {
+        height: auto;
+    }
+
+    .areas-indice div p {
+        margin-bottom: 1rem;
+    }
+}
+
+/*--- detalle áreas  ---*/
+
+.container-areas section {
+   margin-top: 2rem;
+   padding-top: 1rem;
+}
+
+.barra-area {
+    display: flex;
+    align-items: center;
+}
+
+.container-areas img {
+    height: 5rem;
+    margin-left: 5rem;
+    margin-right: 1rem;
+}
+
+.container-areas h2 {
+    font-family: var(--fuente-acentos);
+    color: black;
+    background-color: var(--color-acentos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.container-areas p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 1rem 5rem 0rem 5rem;
+    line-height: 2rem;
+}
+
+.container-areas ul li {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 1rem 5rem 0rem 6rem;
+    line-height: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .barra-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-areas img {
+        margin: 0 0;
+    }
+
+    .container-areas h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-areas p {
+        margin: 1.5rem 2rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+    
+    .container-areas ul li {
+        font-size: 1rem;
+        text-align: center;
+        margin: 1.5rem 2rem;
+        line-height: 1rem;
+    }
+}
+
+.fondo-3 {
+    width: 100%;
+    max-height: 11rem;
+    margin-top: 4rem;
+}

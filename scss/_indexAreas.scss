@@ -1,0 +1,68 @@
+@import 'variables';
+
+#areas {
+    h2 {
+        @extend %titulos;
+    }
+
+    .areas-container {
+        
+        section {
+            width: 20rem;
+            text-align: center;
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+
+            img {
+                width: 5.5rem;
+                padding-bottom: .3rem;
+            }
+
+            h3 {
+                 background-color: $color-principal;
+                 color: $color-blanco;
+                 font-family: $fuente-titulos;
+                 
+                 text-transform: uppercase;
+                 font-size: 1.1rem;
+                 font-weight: 600;
+                 line-height: 1.4rem;
+                 
+                 max-width: 12rem;
+                 padding: 0.7rem;
+                 margin: auto;
+            }
+
+            p {
+                color: $color-negro;
+                padding-top: .5rem;
+            }
+
+            .ver-areas {
+                @include buttonStyle2;
+                font-family: $fuente-titulos;
+                margin-top: 0.5rem;
+                padding: 0 5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+//mobile
+
+@media screen and (max-width: 768px) {
+    #areas {
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .areas-container {
+            section {
+                margin-top: 0;
+            }
+        }
+    }
+}

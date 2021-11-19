@@ -1,0 +1,97 @@
+@import 'variables';
+
+#estudio {
+    margin: 0 6rem;
+
+    h1 {
+        @extend %titulos;
+        font-size: 3rem;
+        margin-bottom: -0.3rem;
+    }
+
+    .texto-container-estudio {
+        text-align: justify;
+        font-size: 1.1rem;
+        line-height: 2rem;
+        padding-right: 3rem;
+    }
+
+    .img-container-estudio {
+       img {
+            width: 100%;
+            max-width: 30rem;
+            padding: 1rem;
+        }
+    }
+
+    .estudio-btn {
+        @include buttonStyle2;
+        margin-top: 1.5rem;
+    }
+}
+
+// MEDIA QUERIES
+
+//mobile
+
+@media screen and (max-width: 768px) {
+    
+    #estudio {
+        margin: 2rem 2.5rem 0rem 2.5rem;
+
+        h1,h2 {
+            @include mqMobileTitles;;
+        }
+
+        .texto-container-estudio {
+            font-size: 1rem;
+            line-height: 2rem;
+            padding: 0;
+        }
+
+        .img-container-estudio {
+            margin-top: 2rem;
+        }
+
+        .estudio-btn {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+
+//tablet
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #estudio {
+        margin: 2rem 3rem;
+
+
+        h1, h2 {
+            @include mqMobileTitles;
+        }
+        
+        .texto-container-estudio {
+            padding: 0;
+        }
+
+        .estudio-btn {
+            @include flexCenter;
+        }
+    
+        .img-container-estudio { 
+            margin-top: 2rem;
+            
+            img {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+.img-decorativa {
+    width: 100%;
+    margin-top: 5rem;
+}

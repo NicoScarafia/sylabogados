@@ -1,0 +1,117 @@
+// --------COLORES PRINCIPALES--------
+
+$color-principal: #14213d;
+$color-acentos: #fca311;
+$color-negro: #000;
+$color-blanco: #fff;
+
+// otros colores
+$extra-colores: 
+#b8b8b8,
+#3b5998, //facebook
+#075e54, //whatsapp
+#ea4335; //maps
+
+
+// -------------FONTS-----------------
+
+$fuente-cuerpo: 'Arimo', sans-serif;
+$fuente-titulos: 'Montserrat', sans-serif;
+
+
+// ------------EXTEND---------------
+
+%titulos {
+    font-family: $fuente-titulos;
+    font-size: 2.5rem;
+    color: $color-negro;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    margin: 1rem 0;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+
+// ------------MIXINS------------------
+
+@mixin flexCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin titulosSecundarios {
+    font-family: $fuente-titulos;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+@mixin transitionHover {
+    transition: all .5s;
+}
+
+@mixin buttonStyle {
+    background-color: $color-acentos;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    width: auto;
+    max-width: 8rem;
+    padding: 0.3rem;
+    border: none;
+}
+
+@mixin buttonStyle2 {
+
+    a {
+        background-color: $color-acentos;
+        color: $color-negro;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.6rem;
+
+        &:hover {
+           color: $color-blanco;
+           box-shadow: -0.1rem 0.1rem 0.3rem darken(nth($extra-colores, 1), 10%);
+           transition: all 0.5s;
+        }
+    }
+}
+
+@mixin backgroundDestacados {
+    background-color: $color-acentos;
+    color: $color-negro;
+    padding: 0.3rem;
+    font-weight: 600;
+}
+
+// RESPONSIVE
+
+@mixin mqMobileTitles {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    margin-top: -2rem !important;
+    padding: 0 1rem;
+}
+
+@mixin mqMobileTextos ($mobile-font-size, $mobile-color, $mobile-line-height) {
+    font-size: $mobile-font-size;
+    color: $mobile-color;
+    line-height: $mobile-line-height;
+}
+
+
+

@@ -1,0 +1,202 @@
+.mas-estudio {
+    margin: 0 5rem;
+
+    .titulo-estudio {
+        @extend %titulos;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 2.3rem;
+        text-align: justify;
+    }
+
+    .soluciones {
+        font-family: $fuente-titulos;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-align: center;
+        font-style: italic;
+        margin-top: 2rem;
+
+        u {
+            font-family: $fuente-titulos;
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    .mas-estudio-img {
+        
+        img {
+            width: 100%;
+            padding: .5rem;
+            min-width: 16rem;
+        }
+    }
+}
+
+// EQUIPO PROFESIONAL
+
+.section-profesional {
+    background-image: url(../assets/img/fondo-1.png);
+    background-color: nth($extra-colores, 1);
+    background-blend-mode: soft-light;
+    height: auto; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin-top: 4rem;
+
+    h2 {
+        @extend %titulos;
+        font-size: 2.2rem;
+        text-align: left;
+        margin-left: 5rem;
+    }
+
+    .container-equipo {
+        text-align: center;
+
+        div {
+            padding: 1.2rem 4.5rem;
+            margin-top: -2rem;
+
+            img {
+                width: 11rem;
+                border-radius: 50%;
+            }
+
+            .nombre-profesional,.cargo-profesional {
+                padding: 0.5rem 0;
+                font-weight: 600;
+            }
+
+            .nombre-profesional {
+                background-color: $color-principal;
+                font-family: $fuente-titulos;
+                color: $color-blanco;
+                text-transform: uppercase;
+            }
+
+            .cargo-profesional {
+                color: $color-negro;
+                margin-top:-1.4rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+
+// CONSULTA
+
+.consulta {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 0 2rem;
+
+    h3 {
+        @include titulosSecundarios;
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+
+    .btn-contactese {
+        @include buttonStyle2;
+        
+        a {
+            padding: 0.7rem;
+        }
+    }
+}
+
+//------------ MEDIA QUERIES -----------------
+
+// MOBILE
+
+@media screen and (max-width: 768px) {
+
+    // NUESTRO ESTUDIO 
+    
+    .mas-estudio {
+        @include flexColumn;
+        margin: 0 0;
+        padding: 0 0;
+
+        p {
+            @include mqMobileTextos(0.9rem, $color-negro, 2.1rem);
+            padding: 0 2rem;
+            font-size: 1.1rem;
+        }
+
+        .soluciones {
+            margin: 3rem 0;
+        }
+
+        .mas-estudio-img {
+            @include flexColumn;
+            margin: 0 0;
+
+            img {
+                max-width: 30rem;
+            }
+        }
+    }
+
+    // EQUIPO PROFESIONAL 
+
+    .section-profesional {
+        h2 {
+            @include mqMobileTitles;
+            padding: 2rem 1rem;
+        }
+    }
+
+    .consulta {
+        padding: 0 1rem;
+    
+        h3 {
+            @include titulosSecundarios;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    
+        p {
+            font-size: 1.1rem;
+            margin: 2rem 0;
+        }
+    
+        .btn-contactese {
+            @include buttonStyle2;
+        }
+    }
+}
+
+
+// TABLET 
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .mas-estudio {
+        @include flexColumn;
+        
+        .mas-estudio-img {
+            @include flexCenter;
+            margin: 2rem auto 1rem auto;
+
+            img {
+                width: 40%;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import 'variables';
+
+.syl-nav {
+    background-color: $color-principal;
+    border-bottom: .2rem solid nth($extra-colores, 1);
+
+    .syl-nav-logo {
+        font-family: $fuente-titulos;
+        color: $color-blanco;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .syl-nav-item a {
+        font-family: $fuente-titulos;
+        color: $color-blanco;
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover {
+            color: $color-acentos;
+            @include transitionHover;
+        }
+    }
+
+    .syl-nav-contacto {
+        color: black !important;
+        background-color: $color-acentos;
+
+        &:hover {
+            color: $color-blanco !important;
+            @include transitionHover;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .nav-flex-desktop {
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        .syl-nav-logo {
+            margin-left: 3rem;
+        }
+    
+        .syl-ul {
+            margin-right: 3rem;
+
+            .syl-nav-item {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .syl-nav-item a {
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
