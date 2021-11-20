@@ -184,6 +184,9 @@ footer .footer-nav {
   line-height: 2rem;
   padding-right: 3rem;
 }
+#estudio .img-container-estudio {
+  margin-top: -3rem;
+}
 #estudio .img-container-estudio img {
   width: 100%;
   max-width: 30rem;
@@ -247,10 +250,7 @@ footer .footer-nav {
     padding: 0;
   }
   #estudio .estudio-btn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
   }
   #estudio .img-container-estudio {
     margin-top: 2rem;

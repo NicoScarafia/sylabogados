@@ -17,6 +17,8 @@
     }
 
     .img-container-estudio {
+        margin-top: -3rem;
+
        img {
             width: 100%;
             max-width: 30rem;
@@ -78,7 +80,7 @@
         }
 
         .estudio-btn {
-            @include flexCenter;
+            text-align: center;
         }
     
         .img-container-estudio { 
