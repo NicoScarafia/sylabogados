@@ -189,6 +189,9 @@ footer .footer-nav {
   line-height: 2rem;
   padding-right: 3rem;
 }
+#estudio .texto-container-estudio .texto-negrita {
+  font-weight: 700;
+}
 #estudio .img-container-estudio {
   margin-top: -2rem;
 }
@@ -543,10 +546,13 @@ footer .footer-nav {
   margin: 0;
   padding: 1rem;
 }
-.mas-estudio p, .mas-estudio p strong {
+.mas-estudio p {
   font-size: 1.1rem;
   line-height: 2.3rem;
   text-align: justify;
+}
+.mas-estudio p .texto-negrita {
+  font-weight: 700;
 }
 .mas-estudio .soluciones {
   font-family: "Montserrat", sans-serif;
