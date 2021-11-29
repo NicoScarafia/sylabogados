@@ -78,6 +78,11 @@
     margin-right: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .syl-nav .syl-nav-logo {
+    font-size: 1.4rem;
+  }
+}
 
 .areas-indice .titulo-areas, .section-profesional h2, .mas-estudio .titulo-estudio, #contacto h2, #areas h2, #estudio h1 {
   font-family: "Montserrat", sans-serif;
@@ -538,7 +543,7 @@ footer .footer-nav {
   margin: 0;
   padding: 1rem;
 }
-.mas-estudio p {
+.mas-estudio p, .mas-estudio p strong {
   font-size: 1.1rem;
   line-height: 2.3rem;
   text-align: justify;
@@ -549,7 +554,7 @@ footer .footer-nav {
   font-weight: 600;
   text-align: center;
   font-style: italic;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 .mas-estudio .soluciones u {
   font-family: "Montserrat", sans-serif;

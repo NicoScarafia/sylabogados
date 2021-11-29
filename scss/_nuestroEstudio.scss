@@ -7,7 +7,7 @@
         padding: 1rem;
     }
 
-    p {
+    p, p strong {
         font-size: 1.1rem;
         line-height: 2.3rem;
         text-align: justify;
@@ -19,7 +19,7 @@
         font-weight: 600;
         text-align: center;
         font-style: italic;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
 
         u {
             font-family: $fuente-titulos;
