@@ -73,7 +73,7 @@
 
     margin: 2rem 5rem;
 
-    section {
+    .areas-detalle {
         padding-top: 1rem;
         margin-top: 2rem;
 
@@ -118,7 +118,7 @@
     .container-areas {
         margin: 0 1.5rem;
      
-        section {
+        .areas-detalle {
 
             .barra-area {
                 @include flexColumn;
